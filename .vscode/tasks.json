@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "AquaFix: Create virtual environment",
+      "type": "process",
+      "command": "C:\\Users\\YB Ishak\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "args": ["-m", "venv", "C:\\Users\\YB Ishak\\AppData\\Local\\AquaFixVenv"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "AquaFix: Install dependencies",
+      "type": "process",
+      "command": "C:\\Users\\YB Ishak\\AppData\\Local\\AquaFixVenv\\Scripts\\python.exe",
+      "args": ["-m", "pip", "install", "-r", "requirements.txt"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "dependsOn": "AquaFix: Create virtual environment",
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "AquaFix: Run Flask",
+      "type": "process",
+      "command": "C:\\Users\\YB Ishak\\AppData\\Local\\AquaFixVenv\\Scripts\\python.exe",
+      "args": ["app.py"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": { "AQUIFIX_DB_PATH": "C:\\Users\\YB Ishak\\AppData\\Local\\AquaFixVenv\\aquafix.db" }
+      },
+      "dependsOn": "AquaFix: Install dependencies",
+      "dependsOrder": "sequence",
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}

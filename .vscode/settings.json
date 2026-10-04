@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\YB Ishak\\AppData\\Local\\AquaFixVenv\\Scripts\\python.exe",
+  "python.terminal.activateEnvironment": true,
+  "files.exclude": {
+    "**/__pycache__": true
+  }
+}

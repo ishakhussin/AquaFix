@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "AquaFix: Run Flask",
+      "type": "debugpy",
+      "request": "launch",
+      "preLaunchTask": "AquaFix: Install dependencies",
+      "program": "${workspaceFolder}\\app.py",
+      "console": "integratedTerminal",
+      "python": "C:\\Users\\YB Ishak\\AppData\\Local\\AquaFixVenv\\Scripts\\python.exe",
+      "env": {
+        "AQUIFIX_DB_PATH": "C:\\Users\\YB Ishak\\AppData\\Local\\AquaFixVenv\\aquafix.db"
+      },
+      "justMyCode": true
+    }
+  ]
+}
